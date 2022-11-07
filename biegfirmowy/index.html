@@ -31,8 +31,8 @@ layout: default
         {% for image in site.static_files %}
         {% if image.path contains 'fulls' %}
         <article class="thumb">
-            <a href="{{ site.baseurl }}/images/{{ page.id }}/fulls/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}/images/{{ page.id }}/thumbs/{{ image.name }}" alt=""
+            <a href="{{ site.baseurl }}{{ image.path }}{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}{{ image.path }}{{ image.name }}" alt=""
                      data-name="{{ image.name }}"/></a>
             <h2>{{ page.id }}</h2>
             <p></p>
