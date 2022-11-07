@@ -29,17 +29,11 @@ layout: default
     <!-- Main -->
     <div id="main">
         {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
+        {% if image.path contains page.dir %}
         <article class="thumb">
-            <a href="{{ site.baseurl }}{{ image.path }}" class="image">
-                <img src="{{ site.baseurl }}{{ image.path }}" alt=""
+            <a href="{{ site.baseurl }}/images{{ page.dir }}fulls/{{ image.path }}" class="image">
+                <img src="{{ site.baseurl }}/images{{ page.dir }}thumbs/{{ image.path }}" alt=""
                      data-name="{{ image.name }}"/></a>
-            <h2>{{ page.path }}</h2>
-            <h2>{{ page.id }}</h2>
-            <h2>{{ page.categories }}</h2>
-            <h2>{{ page.name }}</h2>
-            <h2>{{ page.dir }}</h2>
-            <h2>{{ page.collection }}</h2>
         </article>
         {% endif %}
         {% endfor %}
