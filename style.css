@@ -9,6 +9,7 @@ body {
     font-family: 'Courgette', sans-serif !important;
     display: flex;
     justify-content: center;
+    background-color: #1e1e1e;
     background-image: url(bg.jpg);
     background-size:cover;
 }
